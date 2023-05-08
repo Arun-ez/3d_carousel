@@ -1,0 +1,89 @@
+* {
+    font-family: system-ui;
+    text-align: center;
+    color: white;
+}
+
+body {
+    background-color: #09101a;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.container {
+    width: 100%;
+    transform-style: preserve-3d;
+    margin-top: 150px;
+}
+
+.cards {
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.cards label {
+    position: absolute;
+    width: 700px;
+    height: 30vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    transition: transform 0.55s ease;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#s1:checked~.cards #slider4,
+#s2:checked~.cards #slider5,
+#s3:checked~.cards #slider1,
+#s4:checked~.cards #slider2,
+#s5:checked~.cards #slider3 {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transform: translate3d(-70%, 0, -220px);
+}
+
+#s1:checked~.cards #slider5,
+#s2:checked~.cards #slider1,
+#s3:checked~.cards #slider2,
+#s4:checked~.cards #slider3,
+#s5:checked~.cards #slider4 {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transform: translate3d(-35%, 0, -120px);
+}
+
+#s1:checked~.cards #slider1,
+#s2:checked~.cards #slider2,
+#s3:checked~.cards #slider3,
+#s4:checked~.cards #slider4,
+#s5:checked~.cards #slider5 {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transform: translate3d(0, 0, 0);
+}
+
+#s1:checked~.cards #slider2,
+#s2:checked~.cards #slider3,
+#s3:checked~.cards #slider4,
+#s4:checked~.cards #slider5,
+#s5:checked~.cards #slider1 {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transform: translate3d(35%, 0, -120px);
+}
+
+#s1:checked~.cards #slider3,
+#s2:checked~.cards #slider4,
+#s3:checked~.cards #slider5,
+#s4:checked~.cards #slider1,
+#s5:checked~.cards #slider2 {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    transform: translate3d(70%, 0, -220px);
+}
